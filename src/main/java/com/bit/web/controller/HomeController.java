@@ -16,8 +16,7 @@ public class HomeController {
    
     @RequestMapping("/")  //루트 URL
     public String index() {
-       
-        
+              
         int count = customerService.countAll();
       
         return "index";
