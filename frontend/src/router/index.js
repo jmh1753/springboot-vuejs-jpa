@@ -2,7 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Carculator from '@/components/basic/Calculator'
-import joinForm from '@/components/member/joinForm'
+import MemberList from '@/components/member/MemberList'
+import JoinForm from '@/components/member/joinForm'
+import LoginForm from '@/components/member/LoginForm'
+
+
 
 Vue.use(Router)
 
@@ -11,6 +15,8 @@ export default new Router({
   routes: [
     {path: '/', name: 'home', component: Home},
     {path : '/calculator', name: 'calculator', component: Carculator},
-    {path : '/joinform', name: 'joinform', component: joinForm}
+    {path : '/memberlist', name: 'memberlist', component: MemberList},
+    {path : '/joinform', name: 'joinform', component: JoinForm}, 
+    {path : '/loginform', name: 'loginform', component: LoginForm}
   ]
 })

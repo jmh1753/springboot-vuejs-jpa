@@ -23,6 +23,7 @@
   </div>
 </template>
 
+
 <script>
 export default {
   data() {
@@ -49,7 +50,10 @@ export default {
         this.current = '';
         this.operatorClicked = false;
       }
+      console.log('current : '+this.current)
+      console.log('number : '+number)
       this.current = `${this.current}${number}`;
+      console.log('current2 : '+this.current)
     },
     dot() {
       if (this.current.indexOf('.') === -1) {
@@ -78,8 +82,8 @@ export default {
     },
     equal() {
       this.current = `${this.operator(
-        parseFloat(this.current), 
-        parseFloat(this.previous)
+        parseFloat(this.previous),
+        parseFloat(this.current)
       )}`;
       console.log('결과 : '+this.current)
       this.previous = null;
