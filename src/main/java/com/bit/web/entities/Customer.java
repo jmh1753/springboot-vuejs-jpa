@@ -33,7 +33,7 @@ public class Customer implements Serializable{  //매퍼역할
     @Column(name="city") private String city; 
     @Column(name="address") private String address; 
     @Column(name="postalcode") private String postalcode; 
-    @Column(name="photo") private String  photo; 
+    @Column(name="photo") private String  photo;  //이름이 같으면 생략가능
     
     @Override
     public String toString(){
